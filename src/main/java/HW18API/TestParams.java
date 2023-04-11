@@ -38,7 +38,7 @@ public class TestParams {
     static Exchange[] exchangesMass;
     @BeforeClass
     public static void b() throws JsonProcessingException {
-        String response = RestGet.Get("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode="+ExchangeEnaum.getVal()+"@json");
+        String response = RestGet.Get("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode="+ExchangeEnaum.ENA+"@json");
         ObjectMapper om = new ObjectMapper();
         exchangesMass= om.readValue(response, Exchange[].class);
     }

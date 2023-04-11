@@ -2,13 +2,13 @@ package HW18API;
 
 public enum ExchangeEnaum {
     USD("USD"), GB("GBP"), ENA("JPY");
-    private static String val;
+    private  String val;
 
-    ExchangeEnaum(String type){
-      String  val = type;
+    ExchangeEnaum(String type) {
+        this.val = type;
     }
 
-    public static String getVal(){
-        return val;
+    public  String getVal() {
+        return this.val;
     }
 }
